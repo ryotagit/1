@@ -1,12 +1,15 @@
 <?php
 //  一般的な制御文(if、for、foreach、while文など)が利用できる
 
- $x =0;
- if ($x == 1){
- echo 'xは1です';
+ $x =10;
+ if ($x == 10){
+ echo 'xは10です';
+ }elseif($x < 10){
+ echo 'xは１0以下です';
  }else{
- echo 'xは１以外です';
- }
+ echo'xは10以上です';
+}
+
  echo '<br>';
 
  for($i=1;$i<=10;$i++){
@@ -31,6 +34,25 @@
   // echo '<br>';
  }
  echo $towns[2]."\n";
+
+?>
+
+<?php
+  // 連想配列のforeach
+
+  $users = array(
+    'name' => 'sakurai',
+    'age' => 23,
+    'gender' => 'man'
+  );
+  
+
+ foreach ($users as $key => $value){
+  echo $key.' ';
+  echo $value;
+  echo "\n";
+ }
+
 
 ?>
 
@@ -91,7 +113,7 @@
 
 <?php 
   // オブジェクトについて理解し、変数に代入することができる、上書きできる
-
+  $hoge = (object)[];
   // $nameはメンバー変数classは設計図
 Class Product{
   public $name;
